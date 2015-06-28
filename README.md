@@ -10,7 +10,7 @@ To run the example, first package up the project into a ZIP file by running:
 ./dist.sh
 ```
 
-Then, simply upload this ZIP to AWS Lambda. When testing with the Lambda wed interface, you should see the function succeed with PDFtk's version and copyright information.
+Then, simply upload this ZIP to AWS Lambda. When testing with the Lambda web interface, you should see the function succeed and output PDFtk's version and copyright information.
 
 You can very easily expand on this boilerplate and use PDFtk in the way it was intended for - manipulating PDF files.
 
@@ -38,7 +38,7 @@ The entry point to the lambda function, `index.js`, alters the `PATH` and `LD_LI
 
 ## Using PDFtk in Amazon Linux
 
-It should be possible to use the PDFtk binary and GCJ shared library located in the `bin/` directory of this file to run PDFtk in Amazon Linux. Simply copy them onto the machine and put them in the correct path, or call them directly:
+It should be possible to use the PDFtk binary and GCJ shared library located in the `bin/` directory of this file to run PDFtk in Amazon Linux on EC2. Simply copy them onto the machine and put them in the correct path, or call them directly:
 
 ```
 LD_LIBRARY_PATH=/path/to/libgcj.so.10 /path/to/pdftk --version
