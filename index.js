@@ -1,12 +1,11 @@
 'use strict';
 
 var exec = require('child_process').exec;
-var path = require('path');
 
-PDFTK_PATH = path.resolve(__dirname, 'bin/pdftk');
-LIBRARY_PATH = path.resolve(__dirname, 'bin');
+// Set the PATH and LD_LIBRARY_PATH environment variables.
+process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'] + '/bin';
+process.env['LD_LIBRARY_PATH'] = process.env['LAMBDA_TASK_ROOT'] + '/bin';
 
 exports.handler = function (event, context) {
-  var command = 'LD_LIBRARY_PATH=' + LIBRARY_PATH + ' ' + PDFTK_PATH + ' --version';
-  exec(command, context.done);
+  exec('pdftk --version', context.done);
 };
