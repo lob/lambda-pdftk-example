@@ -1,0 +1,19 @@
+{
+  "name": "lambda-pdftk-example",
+  "version": "0.1.0",
+  "description": "Example project that runs PDFtk in AWS Lambda.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lob/lambda-pdftk-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lob/lambda-pdftk-example/issues"
+  },
+  "homepage": "https://github.com/lob/lambda-pdftk-example"
+}
